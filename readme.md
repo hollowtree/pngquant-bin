@@ -11,6 +11,25 @@ You probably want [`imagemin-pngquant`](https://github.com/imagemin/imagemin-png
 $ npm install pngquant-bin
 ```
 
+### Downloading From a Custom Source
+By default, this package will download pngquant-bin from GitHub. To use a custom source, set the npm config property `imagemin_local_url`. The downloader will append `/<name>/<version>/vendor/<dist>`.
+
+```
+$ npm install pngquant-bin --imagemin_local_url=https://mymirror.local/path
+```
+
+Or add property into your `.npmrc` file([https://docs.npmjs.com/files/npmrc](https://docs.npmjs.com/files/npmrc))
+
+```
+imagemin_local_url=https://mymirror.local/path
+```
+
+Another option is to use the environment variable `IMAGEMIN_LOCAL_URL`.
+
+```
+$ IMAGEMIN_LOCAL_URL=https://mymirror.local/path npm install pngquant-bin
+```
+
 
 ## Usage
 
